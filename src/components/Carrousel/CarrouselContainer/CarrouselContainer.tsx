@@ -33,7 +33,7 @@ export const CarrouselContainer = ({
         ))}
       </Swiper>
       {hasText && (
-        <div className="mt-[41.92px] md:ml-[709.06px] flex-col">
+        <div className="mt-[41.92px] ml-[709.06px] flex-col">
           <div className="mb-[9.57px]">
             <TextBlock text={WHEN_ZARA_ORIGIN_LAUCHED_FIRST_PART_CARROUSEL} />
           </div>
