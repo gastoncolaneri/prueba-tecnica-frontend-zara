@@ -53,7 +53,7 @@ Esto sirve los archivos compilados localmente para realizar pruebas antes del de
 
 ---
 
-Para poder probar este proyecto sin necesidad de clonar el repositorio, podés utilizar **[este enlace](https://prueba-front-end-inditex.vercel.app/)**.
+Para poder probar este proyecto sin necesidad de clonar el repositorio, podés utilizar **[este enlace](https://prueba-tecnica-frontend-zara.vercel.app/)**.
 
 ## 📸 Funcionalidades implementadas
 
