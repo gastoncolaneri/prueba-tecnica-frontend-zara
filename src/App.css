@@ -1,6 +1,17 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.swiper {
+  height: 100%;
+  margin-left: 60.87px !important;
+}
+
+.swiper-slide {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
 }

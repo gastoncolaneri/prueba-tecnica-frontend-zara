@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "swiper/css/navigation";
+@import "swiper/css";
 
 @font-face {
   font-family: "XXemeEtage";
@@ -33,7 +35,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #000000;
     background-color: #ffffff;
   }
 }

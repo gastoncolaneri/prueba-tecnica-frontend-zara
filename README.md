@@ -1,69 +1,97 @@
-# React + TypeScript + Vite
+# Prueba Técnica PostProducción ZARA - Réplica de diseño
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una prueba técnica para el equipo de **Postproducción ZARA**. El objetivo principal fue replicar un diseño proporcionado con precisión visual, implementando animaciones modernas y asegurando una experiencia completamente responsive en diferentes dispositivos.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19**
+- **Vite** como bundler
+- **Tailwind CSS** para los estilos
+- **Swiper** para la creación del carrousel
+- **ScrollReveal** para animaciones al hacer scroll
+- **TypeScript** para añadir tipados, mejorando la experiencia de desarrollo y mantenimiento del código
 
-## Expanding the ESLint configuration
+## 🛠 Cómo Ejecutar el Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **1️⃣ Instalar Dependencias**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Antes de ejecutar el proyecto, asegúrate de tener **Node.js** instalado. Luego, instala las dependencias ejecutando el comando:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### **2️⃣ Ejecutar en Modo Desarrollo**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para iniciar un servidor de desarrollo ejecuta el siguiente comando:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm run dev
 ```
+
+Esto iniciará la aplicación en `http://localhost:5173` (o en un puerto diferente si está configurado).
+
+### **3️⃣ Compilar para Producción**
+
+Para generar una compilación optimizada para producción:
+
+```sh
+npm run build
+```
+
+Esto creará una carpeta `dist/` que contiene la aplicación compilada.
+
+### **4️⃣ Ejecutar la Versión de Producción Localmente**
+
+Para previsualizar la compilación de producción:
+
+```sh
+npm run preview
+```
+
+Esto sirve los archivos compilados localmente para realizar pruebas antes del despliegue.
+
+---
+
+Para poder probar este proyecto sin necesidad de clonar el repositorio, podés utilizar **[este enlace](https://prueba-front-end-inditex.vercel.app/)**.
+
+## 📸 Funcionalidades implementadas
+
+### ✨ Animaciones
+
+- **Hover Effects** sobre imágenes.
+- **Carousel** utilizando `Swiper`.
+- **Scroll Animations** con `ScrollReveal` para que al hacer scroll los elementos aparezcan dinámicamente
+
+### 📱 Responsividad
+
+La interfaz fue diseñada para adaptarse tanto a pantallas grandes (desktop), medianas (tablet) y pequeñas (móviles).
+
+### 🧠 Decisiones técnicas
+
+Tailwind CSS: Elegido por su velocidad de desarrollo, utilidad para lograr un diseño pixel-perfect y facilidad para manejar breakpoints responsive.
+
+ScrollReveal: Una librería ligera y sencilla para animaciones al hacer scroll, sin necesidad de usar un framework más pesado como GSAP.
+
+Swiper: Por su robustez, flexibilidad y soporte excelente para carousels responsivos.
+
+Vite + React 19: Stack moderno, rápido y familiar para el desarrollo de SPAs.
+
+Arquitectura modular: Los componentes fueron divididos según responsabilidad visual, mejorando la legibilidad y mantenibilidad del código.
+
+Tipado con TypeScript: Para mayor seguridad y escalabilidad.
+
+Cambio de formato de imágenes: Se optó por cambiar el formato .jpeg de las imágenes a .webp, ya que de esta manera se reduce el tamaño de las mismas, logrando una carga más rápida de la aplicación.
+
+⏱️ Tiempo dedicado
+Aproximadamente 11 horas en total, divididas de la siguiente manera:
+
+Setup y configuración inicial: 1 hora
+
+Implementación visual y estructura base: 2 horas
+
+Animaciones (scroll, hover, carousel): 4 horas
+
+Responsividad y pruebas cross-device: 3 horas
+
+Ajustes finos y documentación: 1 hora
